@@ -9,7 +9,7 @@ var_cpus           = 2
 var_non_rotational = 'on' # SSD
 var_disk1_name      = './kvm-u01.vdi'
 var_disk1_size      = 50
-var_disk2_name      = './kvm-images.vdi'
+var_disk2_name      = './docker-disk.vdi'
 var_disk2_size      = 100
 
 # All Vagrant configuration is done below. The "2" in Vagrant.configure
