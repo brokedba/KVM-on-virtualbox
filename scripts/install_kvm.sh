@@ -59,12 +59,16 @@ echo " import terraform libvirt provider for CentOS 7 / Fedora "
 echo
 wget https://github.com/dmacvicar/terraform-provider-libvirt/releases/download/v0.6.2/terraform-provider-libvirt-0.6.2+git.1585292411.8cbe9ad0.Fedora_28.x86_64.tar.gz
 tar xvf terraform-provider-libvirt-0.6.2+git.1585292411.8cbe9ad0.Fedora_28.x86_64.tar.gz
-mv terraform-provider-libvirt /root/.terraform.d/plugins/
+mkdir -p /root/.local/share/terraform/plugins/registry.terraform.io/dmacvicar/libvirt/0.6.2/linux_amd64
+
+mv terraform-provider-libvirt /root/.local/share/terraform/plugins/registry.terraform.io/dmacvicar/libvirt/0.6.2/linux_amd64
+#mv terraform-provider-libvirt /root/.terraform.d/plugins/
 echo
 echo " Using Terraform KVM Provider"
 echo
 mkdir -p /root/projects/terraform
-cp /vagrant/scripts/libvirt.tf /root/projects/terraform/ 
+cp /vagrant/scripts/kvm-compute.tf /root/projects/terraform/ 
+cp /vagrant/scripts/cloud_init.cfg /root/projects/terraform/ 
 echo " import terraformer providers for CentOS 7 / Fedora "
 echo
 export PROVIDER={all,google,aws,kubernetes,azure}
