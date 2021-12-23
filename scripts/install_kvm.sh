@@ -67,8 +67,10 @@ echo
 echo " Using Terraform KVM Provider"
 echo
 mkdir -p /root/projects/terraform
+mkdir -p /root/projects/terraform/ubuntu
 cp /vagrant/scripts/kvm-compute.tf /root/projects/terraform/ 
-cp /vagrant/scripts/cloud_init.cfg /root/projects/terraform/ 
+cp /vagrant/scripts/cloud_init.cfg /root/projects/terraform/
+cp /vagrant/scripts/ubuntu.tf  /root/projects/terraform/ubuntu/
 echo " import terraformer providers for CentOS 7 / Fedora "
 echo
 export PROVIDER={all,google,aws,kubernetes,azure}
