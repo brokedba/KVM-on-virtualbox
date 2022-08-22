@@ -1,6 +1,5 @@
 # KVM-on-virtualbox
 KVM lab inside a virtualbox vm (Nested virtualization) using vagrant.
-OS:OEL7
 Please check the blog for more details and demo.
  http://www.brokedba.com/2021/12/kvm-lab-inside-virtualbox-vm-nested.html
  
@@ -19,4 +18,4 @@ C:\Users\brokedba> vagrant up
 ```
 
 
-
+KVM nested HOST OS:OEL7
